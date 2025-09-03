@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artivio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class = "container">
+        <h1 class="logo-title">🎨 Artivio<span class="accent-dot">.</span></h1>
+        <form method="POST">
+            <textarea name="prompt" placeholder="Describe your amazing artwork..." required rows="3" class="fade-in"></textarea>
+
+            <select name="style" class="fade-in" required>
+                <option value="" selected class="placeholder-option">Choose your style...</option>
+                <option value="pencil">Pencil</option>
+                <option value="ink">Ink</option>
+                <option value="charcoal">Charcoal</option>
+                <option value="watercolor">Watercolor</option>
+                <option value="painting">Painting</option>
+            </select><br>
+            <button type="submit" class="action-button">Generate Your Art</button>
+        </form>
+
+    {% if image_path %}
+        <h2>Your Artistic Masterpiece</h2>
+        <img src="{{ image_path }}" alt="Generated Sketch">
+        <br><a href="{{ image_path }}" download class="action-button">Download Artwork</a>
+        <form method="POST" action="/clear">
+        <button type="submit" class="action-button">Clear Art</button>
+        </form>
+    {% endif %}
+<script>
+document.addEventListener("input", function (e) {
+    if (e.target.tagName.toLowerCase() === "textarea") {
+        e.target.style.height = "auto";
+        e.target.style.height = (e.target.scrollHeight) + "px";
+    }
+});
+</script>
+    </div>
+</body>
+</html>
