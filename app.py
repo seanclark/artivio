@@ -8,8 +8,6 @@ import datetime
 
 app = Flask(__name__)
 
-# os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
-
 load_dotenv()
 REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 
@@ -54,5 +52,8 @@ def clear():
 
     return redirect(url_for("index"))
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# Optional: Enable debug mode explicitly if needed
+app.config["DEBUG"] = False  # or True for testing
+
+
+
