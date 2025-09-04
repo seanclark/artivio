@@ -22,5 +22,3 @@ def generate_sketch(prompt, style):
     response = requests.get(image_url)
     with open(filename, "wb") as f:
         f.write(response.content)
-
-    # print(f"Sketch saved to {filename}")
