@@ -24,11 +24,3 @@ def generate_sketch(prompt, style):
         f.write(response.content)
 
     # print(f"Sketch saved to {filename}")
-
-# if __name__ == "__main__":
-#     parser = argparse.ArgumentParser(description="PromptSketch CLI")
-#     parser.add_argument('--prompt', type=str, required=True, help='Text prompt for sketch generation')
-#     parser.add_argument('--style', type=str, choices=STYLE_MAP.keys(), default="pencil", help='Sketch style')
-#     args = parser.parse_args()
-
-#     generate_sketch(args.prompt, args.style)
