@@ -1,7 +1,6 @@
 # artivio-ai-art-generator
-AI art generator with drop-down styles using Replicate
 
-Artivio – A minimalist, full-stack art generation app using Replicate’s Flux model. Built with Flask, HTML/CSS, and Python.
+Artivio – A minimalist, full-stack AI art generation app using Replicate’s Flux-Schnell model (See Credits below). Built with Flask, HTML/CSS, and Python.
 
 *Designed and deployed a responsive web interface for real-time AI art generation.
 
@@ -11,6 +10,9 @@ Artivio – A minimalist, full-stack art generation app using Replicate’s Flux
 
 *Built in three evenings...demonstrates end-to-end product thinking and rapid prototyping
 
+<img width="578" height="497" alt="Artivio screenshot 1" src="https://github.com/user-attachments/assets/b67ba79e-1fb4-4ca2-8df8-d5757e0c370b" />
+
+<img width="500" height="743" alt="image" src="https://github.com/user-attachments/assets/973f46c6-26a1-449d-a1e1-b3afe6b2086b" /> 
 
 ## Credits & Licensing
 - Flux model by [fofr](https://replicate.com/fofr/flux) on Replicate
