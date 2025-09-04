@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, send_from_directory
 from config import STYLE_MAP
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import replicate
 import requests
 import os
@@ -8,7 +8,6 @@ import datetime
 
 app = Flask(__name__)
 
-load_dotenv()
 REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 
 @app.route("/", methods=["GET", "POST"])
