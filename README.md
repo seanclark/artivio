@@ -1,4 +1,4 @@
-# artivio-ai-art-generator
+# Artivio Art Generator
 
 Artivio – A minimalist, full-stack AI art generation app using Replicate’s Flux-Schnell model (See Credits below). Built with Flask, HTML/CSS, and Python along with a love for art and appreciation for AI.
 
