@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, send_from_directory
 from config import STYLE_MAP
-# from dotenv import load_dotenv
 import replicate
 import requests
 import os
@@ -19,7 +18,7 @@ def index():
         style_modifier = STYLE_MAP.get(style, "")
         full_prompt = f"{style_modifier}, {prompt}"
 
-        output = replicate.run("black-forest-labs/flux-schnell:cfb1c2c8c7b9b8e2b6e6e5c4d3a2a1f0e0d0c0b0", 
+        output = replicate.run("black-forest-labs/flux-schnell", 
         input={"prompt": full_prompt})
         image_url = output[0]
 
