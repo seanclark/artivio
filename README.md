@@ -1,6 +1,6 @@
 # Artivio Art Generator
 
-Artivio – A minimalist, full-stack AI art generation app using Replicate’s Flux-Schnell model (See Credits below). Built with Flask, HTML/CSS, and Python along with a love for art and appreciation for AI. The dropdown menu allows you to choose the tools; Painting, Charcoal, Pencil, Ink, or Watercolor so you can create anything you can dream up.
+Artivio – A minimalist, full-stack AI art generation app using the prunaai/flux.1-dev model on Replicate (See Credits below). Built with Flask, HTML/CSS, and Python along with a love for art and appreciation for AI. The dropdown menu allows you to choose the tools; Painting, Charcoal, Pencil, Ink, or Watercolor so you can create anything you can dream up.
 
 *Designed and deployed a responsive web interface for real-time AI art generation.
 
@@ -17,5 +17,6 @@ with AI tools such as ChatGPT and CoPilot.
 
 
 ## Credits & Licensing
-- Flux model by [fofr](https://replicate.com/fofr/flux) on Replicate
-- Licensed under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+This project uses the `prunaai/flux.1-dev` model for non-commercial, demonstration purposes only.
+Model license and usage terms are available on [PrunaAI's Hugging Face page]([https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md])).
+
