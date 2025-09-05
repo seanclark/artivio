@@ -22,7 +22,7 @@ def index():
         print("Sending to Replicate:", {"prompt": full_prompt})
 
         output = replicate.run(
-            "nvidia/sana-sprint-1.6b:038aee6907b53a5c148780983e39a50ce7cd0747b4e2642e78387f48cf36039a",
+            "prunaai/flux.1-dev:b0306d92aa025bb747dc74162f3c27d6ed83798e08e5f8977adf3d859d0536a3",
             input={
                 "prompt": full_prompt,
                 "width": 1024,
