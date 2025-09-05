@@ -19,7 +19,7 @@ def index():
         full_prompt = f"{style_modifier}, {prompt}"
         print("Sending to Replicate:", {"prompt": full_prompt})
 
-        output = replicate.run(
+    output = replicate.run(
         "nvidia/sana-sprint-1.6b:038aee6907b53a5c148780983e39a50ce7cd0747b4e2642e78387f48cf36039a",
         input={
             "prompt": full_prompt,
