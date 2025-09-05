@@ -33,15 +33,21 @@ def index():
             "output_quality": 80
         }
     )
-print("Replicate output:", output)
 
+    print("Replicate output:", output)
+
+    if output and isinstance(output, list) and len(output) > 0:
+        image_url = output[0]
+    else:
+        print("No image URL returned")
+        return "Image generation failed", 500
         # Save image locally
-        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"sketch_{style}_{timestamp}.png"
-        filepath = os.path.join("static", "sketches", filename)
-        response = requests.get(image_url)
-        with open(filepath, "wb") as f:
-            f.write(response.content)
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"sketch_{style}_{timestamp}.png"
+    filepath = os.path.join("static", "sketches", filename)
+    response = requests.get(image_url)
+    with open(filepath, "wb") as f:
+        f.write(response.content)
 
         return render_template("index.html", image_path=filepath)
 
