@@ -11,9 +11,9 @@ Artivio – A minimalist, full-stack AI art generation app using the prunaai/flu
 *Built in three evenings...demonstrating end-to-end product thinking and rapid prototyping by utilizing code assistance and debugging 
 with AI tools such as ChatGPT and CoPilot.
 
-<img width="528" height="447" alt="Artivio screenshot 1" src="https://github.com/user-attachments/assets/b67ba79e-1fb4-4ca2-8df8-d5757e0c370b" />
-<img width="500" height="743" alt="image" src="https://github.com/user-attachments/assets/973f46c6-26a1-449d-a1e1-b3afe6b2086b" /> 
-<img width="500" height="743" alt="image" src="https://github.com/user-attachments/assets/4eed7271-2b38-4930-a1f2-ece2c1eb687b" />
+
+<img width="749" height="968" alt="Screen Shot 2025-09-05 at 4 07 45 PM" src="https://github.com/user-attachments/assets/6fe270ae-5047-4223-ac86-797f94cdce89" />
+<img width="659" height="670" alt="Screen Shot 2025-09-05 at 4 10 33 PM" src="https://github.com/user-attachments/assets/243c2934-e575-4b07-ac41-01e70ee2e3d7" />
 
 
 ## Credits & Licensing
