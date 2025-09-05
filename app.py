@@ -38,11 +38,6 @@ def index():
 
         print("Replicate output:", output)
 
-        # if output and isinstance(output, list) and len(output) > 0:
-        #     image_url = output[0]
-        # else:
-        #     print("No image URL returned")
-        #     return "Image generation failed", 500
         if output and isinstance(output, str):
             image_url = output
         else:
@@ -63,49 +58,6 @@ def index():
     # GET request fallback
     return render_template("index.html", image_path=None)
 
-# @app.route("/", methods=["GET", "POST"])
-# def index():
-#     image_url = None
-#     if request.method == "POST":
-#         prompt = request.form["prompt"]
-#         style = request.form["style"]
-#         style_modifier = STYLE_MAP.get(style, "")
-#         full_prompt = f"{style_modifier}, {prompt}"
-#         print("Sending to Replicate:", {"prompt": full_prompt})
-
-#     output = replicate.run(
-#         "nvidia/sana-sprint-1.6b:038aee6907b53a5c148780983e39a50ce7cd0747b4e2642e78387f48cf36039a",
-#         input={
-#             "prompt": full_prompt,
-#             "width": 1024,
-#             "height": 1024,
-#             "inference_steps": 2,
-#             "intermediate_timesteps": 1.3,
-#             "guidance_scale": 4.5,
-#             "seed": -1,
-#             "output_format": "jpg",
-#             "output_quality": 80
-#         }
-#     )
-
-#     print("Replicate output:", output)
-
-#     if output and isinstance(output, list) and len(output) > 0:
-#         image_url = output[0]
-#     else:
-#         print("No image URL returned")
-#         return "Image generation failed", 500
-#         # Save image locally
-#     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-#     filename = f"sketch_{style}_{timestamp}.png"
-#     filepath = os.path.join("static", "sketches", filename)
-#     response = requests.get(image_url)
-#     with open(filepath, "wb") as f:
-#         f.write(response.content)
-
-#         return render_template("index.html", image_path=filepath)
-
-#     return render_template("index.html", image_path=None)
 from flask import redirect, url_for
 
 @app.route("/clear", methods=["POST"])
