@@ -1,6 +1,8 @@
-# Artivio Art Generator
+# Artivio Art Studio
 
-Artivio – A minimalist, full-stack AI art generation app using the prunaai/flux.1-dev model on Replicate (See Credits below). Built with Flask, HTML/CSS, and Python along with a love for art and appreciation for AI. The dropdown menu allows you to choose the tools; Painting, Charcoal, Pencil, Ink, or Watercolor so you can create anything you can dream up.
+Artivio – A minimalist, full-stack AI art generation app using the prunaai/flux.1-dev model on Replicate (See Credits below). Built with Flask, HTML/CSS, and Python along with a love for art and appreciation for AI. The dropdown menu allows you to choose the tools; Painting, Charcoal, Pencil, Ink, Photo, or Watercolor so you can create anything you can dream up.
+
+Try it out on the live Web app demo: [(https://artivio-art-generator.onrender.com)] (Please allow a minute for the site to load)
 
 *Designed and deployed a responsive web interface for real-time AI art generation.
 
