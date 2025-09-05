@@ -38,8 +38,13 @@ def index():
 
         print("Replicate output:", output)
 
-        if output and isinstance(output, list) and len(output) > 0:
-            image_url = output[0]
+        # if output and isinstance(output, list) and len(output) > 0:
+        #     image_url = output[0]
+        # else:
+        #     print("No image URL returned")
+        #     return "Image generation failed", 500
+        if output and isinstance(output, str):
+            image_url = output
         else:
             print("No image URL returned")
             return "Image generation failed", 500
