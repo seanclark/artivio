@@ -19,9 +19,23 @@ def index():
         full_prompt = f"{style_modifier}, {prompt}"
         print("Sending to Replicate:", {"prompt": full_prompt})
 
-        output = replicate.run("black-forest-labs/flux-schnell:cfb1c2c8c7b9b8e2b6e6e5c4d3a2a1f0e0d0c0b0", 
-        input={"prompt": full_prompt})
-        image_url = output[0]
+        # output = replicate.run("black-forest-labs/flux-schnell:cfb1c2c8c7b9b8e2b6e6e5c4d3a2a1f0e0d0c0b0", 
+        # input={"prompt": full_prompt})
+        # image_url = output[0]
+        output = replicate.run(
+        "nvidia/sana-sprint-1.6b:038aee6907b53a5c148780983e39a50ce7cd0747b4e2642e78387f48cf36039a",
+        input={
+            "prompt": full_prompt,
+            "width": 1024,
+            "height": 1024,
+            "inference_steps": 2,
+            "intermediate_timesteps": 1.3,
+            "guidance_scale": 4.5,
+            "seed": -1,
+            "output_format": "jpg",
+            "output_quality": 80
+        }
+    )
 
         # Save image locally
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
