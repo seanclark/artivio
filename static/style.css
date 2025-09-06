@@ -55,23 +55,23 @@
             font-family: 'Pacifico', cursive;
         } */
 
-        /* .logo-title {
+        .logo-title {
             font-family: 'Segoe UI', sans-serif;
             font-size: 2.5rem;
             font-weight: 600;
             letter-spacing: 1px;
             margin-bottom: 20px;
             color: #333;
-        } */
+        }
 
-        .logo {
+        /* .logo {
             height: 2.5rem;
             display: block;
             margin: 0 auto; /* centers it horizontally */
-            padding-top: 1rem;
+            /* padding-top: 1rem;
             margin-bottom: 20px;
-        }
-           
+        } */
+            
         .accent-dot {
             color: #823dd2;
             font-size: 2.5rem;
