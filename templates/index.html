@@ -3,13 +3,14 @@
 <head>
     <title>Artivio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class = "container">
         <h1 class="logo-title">🎨 Artivio<span class="accent-dot">.</span></h1>
+        <h2 class="subtitle">AI Art Studio</h2>
         <form method="POST">
             <textarea name="prompt" placeholder="Describe your amazing artwork..." required rows="3" class="fade-in"></textarea>
-
             <select name="style" class="fade-in" required>
                 <option value="" selected class="placeholder-option">Choose your style...</option>
                 <option value="pencil">Pencil</option>
