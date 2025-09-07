@@ -24,15 +24,7 @@ def index():
         output = replicate.run(
             "prunaai/flux.1-dev:b0306d92aa025bb747dc74162f3c27d6ed83798e08e5f8977adf3d859d0536a3",
             input={
-                "prompt": full_prompt,
-                # "width": 1024,
-                # "height": 1024,
-                # "inference_steps": 2,
-                # "intermediate_timesteps": 1.3,
-                # "guidance_scale": 4.5,
-                # "seed": -1,
-                # "output_format": "jpg",
-                # "output_quality": 80
+                "prompt": full_prompt
             }
         )
 
