@@ -14,8 +14,8 @@ Try it out on the live Web app demo: https://artivio-art-generator.onrender.com 
 with AI tools such as ChatGPT and CoPilot.
 
 
-<img width="749" height="968" alt="Screen Shot 2025-09-05 at 4 07 45 PM" src="https://github.com/user-attachments/assets/6fe270ae-5047-4223-ac86-797f94cdce89" />
-<img width="659" height="670" alt="Screen Shot 2025-09-05 at 4 10 33 PM" src="https://github.com/user-attachments/assets/243c2934-e575-4b07-ac41-01e70ee2e3d7" />
+<img width="549" height="768" alt="Screen Shot 2025-09-05 at 4 07 45 PM" src="https://github.com/user-attachments/assets/6fe270ae-5047-4223-ac86-797f94cdce89" />
+<img width="559" height="570" alt="Screen Shot 2025-09-05 at 4 10 33 PM" src="https://github.com/user-attachments/assets/243c2934-e575-4b07-ac41-01e70ee2e3d7" />
 
 
 ## Credits & Licensing
