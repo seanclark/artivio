@@ -23,3 +23,4 @@ with AI tools such as ChatGPT and CoPilot.
 This project uses the `prunaai/flux.1-dev` model for non-commercial, demonstration purposes only.
 Model license and usage terms are available on PrunaAI's Hugging Face page at https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md
 
+Artivio was originally built by Sean Clark but honored by all who fork and build on it for improvements and scaling! Feel free to reach out for collaboration.
