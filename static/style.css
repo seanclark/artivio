@@ -1,8 +1,9 @@
+        @media (max-width: 600px) {
         body {
             font-family: sans-serif;
             background-color: #f9f9f9;
             margin: 0;
-            padding: 40px;
+            padding: 20px;
             display: flex;
             justify-content: center;
         }
@@ -50,7 +51,7 @@
         .action-button:hover {
             background-color: #9a60de;
         }
-
+        }
         /* .subtitle {
             font-family: 'Pacifico', cursive;
         } */
