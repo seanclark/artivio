@@ -1,6 +1,7 @@
         body {
             font-family: sans-serif;
-            background-color: #f9f9f9;
+            /* background-color: #f9f9f9; */
+            background: linear-gradient(135deg, #f9f9f9, #823dd2 80%);
             margin: 0;
             padding: 20px;
             display: flex;
