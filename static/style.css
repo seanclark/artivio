@@ -1,7 +1,6 @@
         body {
             font-family: sans-serif;
-            /* background-color: #f9f9f9; */
-            background: linear-gradient(135deg, #f9f9f9, #823dd2 80%);
+            background-color: #f9f9f9;
             margin: 0;
             padding: 20px;
             display: flex;
@@ -51,11 +50,7 @@
         .action-button:hover {
             background-color: #9a60de;
         }
-
-        /* .subtitle {
-            font-family: 'Pacifico', cursive;
-        } */
-
+        
         .logo-title {
             font-family: 'Segoe UI', sans-serif;
             font-size: 2.5rem;
@@ -64,15 +59,7 @@
             margin-bottom: 20px;
             color: #333;
         }
-
-        /* .logo {
-            height: 2.5rem;
-            display: block;
-            margin: 0 auto; /* centers it horizontally */
-            /* padding-top: 1rem;
-            margin-bottom: 20px;
-        } */
-            
+                 
         .accent-dot {
             color: #823dd2;
             font-size: 2.5rem;
