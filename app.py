@@ -36,35 +36,10 @@ def index():
             print("Unexpected output format:", output)
             return "Image generation failed", 500
 
-    return render_template("index.html", image_url=image_url)
-
-
-# @app.route("/", methods=["GET", "POST"])
-# def index():
-#     image_url = None
-#     if request.method == "POST":
-#         prompt = request.form["prompt"]
-#         style = request.form["style"]
-#         style_modifier = STYLE_MAP.get(style, "")
-#         full_prompt = f"{style_modifier}, {prompt}"
-
-#         print("Sending to Replicate:", {"prompt": full_prompt})
-
-#         output = replicate.run(
-#             "charcotta/freyja:c2e9261484dad2d807784c77993c99dc5c3a79685e7808be9959c020e7433e88",
-#             input={
-#                 "prompt": full_prompt
-#             }
-#         )
-
-#         print("Replicate output:", output)
-
-#         if output and isinstance(output, str):
-#             image_url = output
-#         else:
-#             print("No image URL returned")
-#             return "Image generation failed", 500
-    
+    # return render_template("index.html", image_url=image_url)
+    web_path = f"/static/sketches/{filename}"
+    return render_template("index.html", image_path=web_path)
+ 
     # Save image locally
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"sketch_{style}_{timestamp}.jpg"
@@ -76,10 +51,6 @@ def index():
 
     return render_template("index.html", image_path=filepath)
 
-    # GET request fallback
-    return render_template("index.html", image_path=None)
-
-from flask import redirect, url_for
 
 @app.route("/clear", methods=["POST"])
 def clear():
