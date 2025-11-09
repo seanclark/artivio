@@ -65,16 +65,16 @@ def index():
 #             print("No image URL returned")
 #             return "Image generation failed", 500
     
-        # Save image locally
-        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"sketch_{style}_{timestamp}.jpg"
-        filepath = os.path.join("static", "sketches", filename)
-        os.makedirs("static/sketches", exist_ok=True)
-        response = requests.get(image_url)
-        with open(filepath, "wb") as f:
-            f.write(response.content)
+    # Save image locally
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"sketch_{style}_{timestamp}.jpg"
+    filepath = os.path.join("static", "sketches", filename)
+    os.makedirs("static/sketches", exist_ok=True)
+    response = requests.get(image_url)
+    with open(filepath, "wb") as f:
+        f.write(response.content)
 
-        return render_template("index.html", image_path=filepath)
+    return render_template("index.html", image_path=filepath)
 
     # GET request fallback
     return render_template("index.html", image_path=None)
