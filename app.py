@@ -22,7 +22,7 @@ def index():
         print("Sending to Replicate:", {"prompt": full_prompt})
 
         output = replicate.run(
-            "prunaai/flux.1-dev:b0306d92aa025bb747dc74162f3c27d6ed83798e08e5f8977adf3d859d0536a3",
+            "charcotta/freyja:c2e9261484dad2d807784c77993c99dc5c3a79685e7808be9959c020e7433e88",
             input={
                 "prompt": full_prompt
             }
