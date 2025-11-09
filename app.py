@@ -12,6 +12,7 @@ REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 @app.route("/", methods=["GET", "POST"])
 def index():
     # image_url = None
+    output = None
     image_url = output[0] if output else None
 
     if request.method == "POST":
