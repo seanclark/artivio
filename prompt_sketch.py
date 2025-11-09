@@ -13,7 +13,7 @@
 #     style_modifier = STYLE_MAP.get(style, "")
 #     full_prompt = f"{style_modifier}, {prompt}"
 
-#     output = replicate.run("black-forest-labs/flux-schnell", input={"prompt": full_prompt})
+#     output = replicate.run("stability-ai/stable-diffusion-3.5-medium", input={"prompt": full_prompt})
 #     image_url = output[0]
 
 #     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
