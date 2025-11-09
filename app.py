@@ -12,7 +12,6 @@ REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 @app.route("/", methods=["GET", "POST"])
 def index():
     image_url = None
-    # image_url = output[0] if output else None
 
     if request.method == "POST":
         prompt = request.form["prompt"]
@@ -24,28 +23,48 @@ def index():
 
         output = replicate.run(
             "charcotta/freyja:c2e9261484dad2d807784c77993c99dc5c3a79685e7808be9959c020e7433e88",
-            input={
-                "prompt": full_prompt
-            }
+            input={"prompt": full_prompt}
         )
 
         print("Replicate output:", output)
 
-        # if output and isinstance(output, str):
-        #     image_url = output
-        # else:
-        #     print("No image URL returned")
-        #     return "Image generation failed", 500
-    output = None
-    if output:
         if isinstance(output, str):
             image_url = output
-        elif isinstance(output, list) and len(output) > 0:
+        elif isinstance(output, list) and output:
             image_url = output[0]
         else:
             print("Unexpected output format:", output)
             return "Image generation failed", 500
 
+    return render_template("index.html", image_url=image_url)
+
+
+# @app.route("/", methods=["GET", "POST"])
+# def index():
+#     image_url = None
+#     if request.method == "POST":
+#         prompt = request.form["prompt"]
+#         style = request.form["style"]
+#         style_modifier = STYLE_MAP.get(style, "")
+#         full_prompt = f"{style_modifier}, {prompt}"
+
+#         print("Sending to Replicate:", {"prompt": full_prompt})
+
+#         output = replicate.run(
+#             "charcotta/freyja:c2e9261484dad2d807784c77993c99dc5c3a79685e7808be9959c020e7433e88",
+#             input={
+#                 "prompt": full_prompt
+#             }
+#         )
+
+#         print("Replicate output:", output)
+
+#         if output and isinstance(output, str):
+#             image_url = output
+#         else:
+#             print("No image URL returned")
+#             return "Image generation failed", 500
+    
         # Save image locally
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"sketch_{style}_{timestamp}.jpg"
