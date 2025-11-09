@@ -11,7 +11,8 @@ REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    image_url = None
+    # image_url = None
+    image_url = output[0] if output else None
 
     if request.method == "POST":
         prompt = request.form["prompt"]
