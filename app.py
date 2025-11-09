@@ -36,6 +36,7 @@ def index():
         # else:
         #     print("No image URL returned")
         #     return "Image generation failed", 500
+    output = None
     if output:
         if isinstance(output, str):
             image_url = output
