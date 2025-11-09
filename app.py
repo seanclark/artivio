@@ -11,9 +11,8 @@ REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    # image_url = None
-    output = None
-    image_url = output[0] if output else None
+    image_url = None
+    # image_url = output[0] if output else None
 
     if request.method == "POST":
         prompt = request.form["prompt"]
@@ -32,11 +31,19 @@ def index():
 
         print("Replicate output:", output)
 
-        if output and isinstance(output, str):
+        # if output and isinstance(output, str):
+        #     image_url = output
+        # else:
+        #     print("No image URL returned")
+        #     return "Image generation failed", 500
+        if output:
+            if isinstance(output, str):
             image_url = output
-        else:
-            print("No image URL returned")
-            return "Image generation failed", 500
+            elif isinstance(output, list) and len(output) > 0:
+                image_url = output[0]
+            else:
+                print("Unexpected output format:", output)
+                return "Image generation failed", 500
 
         # Save image locally
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
