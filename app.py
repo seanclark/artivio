@@ -48,55 +48,12 @@ def index():
 
     return render_template("index.html", image_path=image_path)
 
-# @app.route("/", methods=["GET", "POST"])
-# def index():
-#     image_url = None
-
-#     if request.method == "POST":
-#         prompt = request.form["prompt"]
-#         style = request.form["style"]
-#         style_modifier = STYLE_MAP.get(style, "")
-#         full_prompt = f"{style_modifier}, {prompt}"
-
-#         print("Sending to Replicate:", {"prompt": full_prompt})
-
-#         output = replicate.run(
-#             "charcotta/freyja:c2e9261484dad2d807784c77993c99dc5c3a79685e7808be9959c020e7433e88",
-#             input={"prompt": full_prompt}
-#         )
-
-#         print("Replicate output:", output)
-
-#         if isinstance(output, str):
-#             image_url = output
-#         elif isinstance(output, list) and output:
-#             image_url = output[0]
-#         else:
-#             print("Unexpected output format:", output)
-#             return "Image generation failed", 500
-
-#     # return render_template("index.html", image_url=image_url)
-#     web_path = f"/static/sketches/{filename}"
-#     return render_template("index.html", image_path=web_path)
- 
-#     # Save image locally
-#     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-#     filename = f"sketch_{style}_{timestamp}.jpg"
-#     filepath = os.path.join("static", "sketches", filename)
-#     os.makedirs("static/sketches", exist_ok=True)
-#     response = requests.get(image_url)
-#     with open(filepath, "wb") as f:
-#         f.write(response.content)
-
-#     return render_template("index.html", image_path=filepath)
-
-
 @app.route("/clear", methods=["POST"])
 def clear():
     sketches_dir = os.path.join("static", "sketches")
     try:
         files = sorted(
-            [f for f in os.listdir(sketches_dir) if f.endswith(".png")],
+            [f for f in os.listdir(sketches_dir) if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))]
             key=lambda x: os.path.getmtime(os.path.join(sketches_dir, x)),
             reverse=True
         )
