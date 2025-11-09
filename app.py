@@ -36,14 +36,14 @@ def index():
         # else:
         #     print("No image URL returned")
         #     return "Image generation failed", 500
-        if output:
-            if isinstance(output, str):
+    if output:
+        if isinstance(output, str):
             image_url = output
-            elif isinstance(output, list) and len(output) > 0:
-                image_url = output[0]
-            else:
-                print("Unexpected output format:", output)
-                return "Image generation failed", 500
+        elif isinstance(output, list) and len(output) > 0:
+            image_url = output[0]
+        else:
+            print("Unexpected output format:", output)
+            return "Image generation failed", 500
 
         # Save image locally
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
