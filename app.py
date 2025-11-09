@@ -53,7 +53,7 @@ def clear():
     sketches_dir = os.path.join("static", "sketches")
     try:
         files = sorted(
-            [f for f in os.listdir(sketches_dir) if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))]
+            [f for f in os.listdir(sketches_dir) if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))],
             key=lambda x: os.path.getmtime(os.path.join(sketches_dir, x)),
             reverse=True
         )
